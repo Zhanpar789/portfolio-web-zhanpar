@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Zhanpar Isman Andria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased relative selection:bg-green-500 selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-mono text-green-400 font-bold text-s">&lt;Software Quality Assurance/&gt;</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm font-mono hover:text-green-400 transition-colors">Home</a>
+                    <a href="#skills" class="text-sm font-mono hover:text-green-400 transition-colors">Skills</a>
+                    <a href="#experience" class="text-sm font-mono hover:text-green-400 transition-colors">Experience</a>
+                    <a href="#projects" class="text-sm font-mono hover:text-green-400 transition-colors">Projects</a>
+                    <a href="#contact" class="text-sm font-mono text-green-400 border border-green-400 px-4 py-2 rounded hover:bg-green-400/10 transition-colors">Resume</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-200 hover:text-white">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-slate-900 border-b border-slate-800 absolute w-full" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#home" class="block py-2 text-slate-300 hover:text-green-400 font-mono">Home</a>
+                <a href="#skills" class="block py-2 text-slate-300 hover:text-green-400 font-mono">Skills</a>
+                <a href="#experience" class="block py-2 text-slate-300 hover:text-green-400 font-mono">Experience</a>
+                <a href="#projects" class="block py-2 text-slate-300 hover:text-green-400 font-mono">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <!-- Foto Profil ditambahkan di sini -->
+                <div class="mb-8">
+                    <img src="IMG_4531_VSCO 6.jpg" alt="Andi Pratama" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-green-400 object-cover shadow-[0_0_20px_rgba(74,222,128,0.3)]">
+                    <!-- GANTI "path/to/your/photo.jpg" dengan path file fotomu yang sebenarnya, misal: "img/foto-profil.jpg" -->
+                </div>
+
+                <p class="font-mono text-green-400 mb-4">Hello, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-100 mb-4">Zhanpar Isman Andria.</h1>
+                <h2 class="text-4xl md:text-4xl font-bold text-slate-400 mb-6">Ensuring quality from requirements to release.</h2>
+                    <p class="text-slate-400 text-lg max-w-xl mb-8 leading-relaxed">
+                        Experienced Software Quality Assurance Engineer specializing in
+                        <span class="text-green-400">Manual Testing</span>,
+                        <span class="text-green-400">API Testing</span>,
+                        <span class="text-green-400">Test Automation</span>,
+                        and <span class="text-green-400">Performance Testing</span>.
+                        Skilled in Cypress, Appium, WebdriverIO, Mocha/Chai, Postman, SQL, and JMeter with hands on experience ensuring web and mobile applications are reliable, scalable, and production ready
+                    </p>
+                    <div class="flex flex-col gap-4 max-w-md">
+                        
+                        <a href="#projects"
+                        class="w-full bg-green-500 text-slate-900 px-6 py-3 rounded font-bold hover:bg-green-400 transition-colors flex items-center justify-center gap-2">
+                            Check My Work
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://github.com/Zhanpar789"
+                            target="_blank"
+                            class="border border-slate-600 text-slate-300 px-6 py-3 rounded hover:border-slate-400 hover:text-white transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/zhanparismanandria/"
+                            target="_blank"
+                            class="border border-slate-600 text-slate-300 px-6 py-3 rounded hover:border-slate-400 hover:text-white transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Terminal Simulation -->
+            <div class="bg-slate-800 rounded-lg shadow-2xl border border-slate-700 p-1 hidden md:block w-full max-w-lg ml-auto transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                <div class="bg-slate-900 rounded-t px-4 py-2 flex items-center gap-2 border-b border-slate-800">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-2 text-xs text-slate-500 font-mono">bash — 80x24</span>
+                </div>
+                <div class="p-6 font-mono text-sm h-80 overflow-y-auto" id="terminal-content">
+                    <div class="text-slate-400">$ npm run regression-test</div>
+
+                    <div class="mt-2 text-slate-300">Starting automation suite...</div>
+
+                    <div class="mt-1 text-green-400">✔ Login Feature</div>
+                    <div class="mt-1 text-green-400">✔ Registration Feature</div>
+                    <div class="mt-1 text-green-400">✔ Student Admission Flow</div>
+
+                    <div class="mt-3 text-slate-300">Running API automation...</div>
+
+                    <div class="mt-1 text-green-400">✔ Auth Service</div>
+                    <div class="mt-1 text-green-400">✔ Student Service</div>
+                    <div class="mt-1 text-green-400">✔ Registration Service</div>
+
+                    <div class="mt-3 text-slate-300">Executing SQL validation...</div>
+                    <div class="mt-1 text-green-400">✔ Database consistency verified</div>
+
+                    <div class="mt-3 text-slate-300">Running JMeter test...</div>
+                    <div class="mt-1 text-green-400">✔ 500 Concurrent Users</div>
+                    <div class="mt-1 text-green-400">✔ Avg Response Time: 187 ms</div>
+
+                    <div class="mt-2 text-slate-300">-----------------------------------</div>
+
+                    <div class="mt-1 text-slate-100">
+                    Coverage:
+                    <span class="text-green-400">Web • Mobile • API</span>
+                    </div>
+
+                    <div class="mt-1 text-slate-100">
+                    Status:
+                    <span class="text-green-400 font-bold">PASSED</span>
+                    </div>
+
+                    <div class="mt-4 text-slate-400">
+                    $ qa --ready-for-release<span class="cursor-blink">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-green-400 font-mono text-xl">02.</span>
+                <h2 class="text-3xl font-bold text-slate-100">Technical Skills</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Automation -->
+                <div class="skill-card bg-slate-900 p-6 rounded-lg border border-slate-700 hover:border-green-500/50 transition-all">
+                    <div class="w-12 h-12 bg-green-500/10 rounded flex items-center justify-center mb-4 text-green-400">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-4">Automation</h3>
+                    <ul class="space-y-2 font-mono text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-green-500"></i> Cypress.io</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-green-500"></i> Selenium</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-green-500"></i> Appium + WebdriverIO (Mobile)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-green-500"></i> Mocha &amp; Chai (API Automation)</li>
+                    </ul>
+                </div>
+
+                <!-- API & Tools -->
+                <div class="skill-card bg-slate-900 p-6 rounded-lg border border-slate-700 hover:border-blue-500/50 transition-all">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded flex items-center justify-center mb-4 text-blue-400">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-4">Tools</h3>
+                    <ul class="space-y-2 font-mono text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-blue-500"></i> Postman</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-blue-500"></i> Apache Jmeter</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-blue-500"></i> ClickUp & JIRA</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-blue-500"></i> Github & Jenkins (CI/CD)</li>
+                    </ul>
+                </div>
+
+                <!-- Languages -->
+                <div class="skill-card bg-slate-900 p-6 rounded-lg border border-slate-700 hover:border-purple-500/50 transition-all">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded flex items-center justify-center mb-4 text-purple-400">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-4">Languages</h3>
+                    <ul class="space-y-2 font-mono text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-purple-500"></i> JavaScript</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-purple-500"></i> Java</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-purple-500"></i> C# / C++</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3 h-3 text-purple-500"></i> SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-green-400 font-mono text-xl">03.</span>
+                <h2 class="text-3xl font-bold text-slate-100">Work Experience</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+
+            <div class="relative border-l border-slate-700 ml-3 space-y-12">
+                <!-- Job 1 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-green-500"></div>
+                    <h3 class="text-xl font-bold text-slate-100">QA Engineer <span class="text-green-400">@Suteki Technology</span></h3>
+                    <p class="font-mono text-sm text-slate-500 mb-4">Aug 2023 - Present</p>
+                    <ul class="list-disc ml-4 space-y-2 text-slate-400 marker:text-green-500">
+                        <li>Conducted comprehensive manual testing using Gherkin syntax to validate application functionality and business requirements.</li>
+                        <li>Documented test scenarios, test results, and bug reports in ClickUp, ensuring clear traceability and fast issue visibility for Scrum Masters and Developers.</li>
+                        <li>Actively maintained application quality by monitoring the system, identifying bugs, and collaborating with cross-functional teams to ensure timely resolution.</li>
+                        <li>Performed User Acceptance Testing (UAT) directly with users by presenting completed features and validating them against user expectations.</li>
+                        <li>Executed manual testing for complex features requiring database validation, including writing SQL queries to verify data accuracy.</li>
+                        <li>Validated backend services by testing API endpoints using Postman.</li>
+                        <li>Conducted manual mobile testing for both Android and iOS applications.</li>
+                        <li>Developed and maintained web automation testing using Cypress with Cucumber (Given, When, Then) for regression and functional testing.</li>
+                        <li>Integrated and executed CI/CD pipelines using GitHub Actions to run automation test suites regularly and detect defects early.</li>
+                        <li>Performed API automation testing for OpenAPI-based projects using Mocha, Chai, and Axios.</li>
+                        <li>Conducted mobile automation testing using Appium with WebdriverIO for Android and iOS platforms.</li>
+                        <li>Executed performance testing using Apache JMeter to ensure system stability under high concurrent user loads.</li>
+                        <li>Actively participated in pull request (PR) reviews, providing constructive feedback to improve code quality and maintain automation standards.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-slate-500"></div>
+                    <h3 class="text-xl font-bold text-slate-100">QA Manual Internship <span class="text-green-400">@Nusantech Technology</span></h3>
+                    <p class="font-mono text-sm text-slate-500 mb-4">Des 2022 - Apr 2023</p>
+                    <ul class="list-disc ml-4 space-y-2 text-slate-400 marker:text-green-500">
+                        <li>Conducted manual testing and accurately documented bugs using spreadsheets as the primary tool</li>
+                        <li>Reported and tracked issues to ensure timely resolution and maintain product quality</li>
+                        <li>Utilized Jira to support basic issue tracking and collaboration with the development team</li>
+                        <li>Strengthened analytical skills by identifying patterns and root causes of bugs</li>
+                        <li>Played an active role in improving application stability by providing clear and structured bug reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="text-green-400 font-mono text-xl">04.</span>
+                <h2 class="text-3xl font-bold text-slate-100">Selected Projects</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+
+            <div class="grid gap-12">
+                <!-- Project 1 -->
+                <div class="group relative grid md:grid-cols-12 gap-4 items-center">
+                    <!-- Content -->
+                    <div class="md:col-span-7 md:col-start-1 md:row-start-1 z-10 p-6 md:p-0">
+                        <p class="font-mono text-green-400 text-sm mb-2">Automation Testing</p>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4"><a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" class="hover:text-green-400 transition-colors">Swagger Labs</a></h3>
+                        <div class="bg-slate-800 p-6 rounded-lg shadow-xl text-slate-400 mb-4 border border-slate-700 max-w-xl">
+                            <p>
+                            Built an end-to-end automation framework using Cypress and Page Object Model (POM).
+                            Automated login, product, cart, and checkout workflows with reusable test components.
+                            </p>
+                        </div>
+                        <ul class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 mb-6">
+                            <li>JavaScript</li>
+                            <li>Cypress</li>
+                            <li>Cucumber</li>
+                        </ul>
+                        <div class="flex gap-4 text-slate-300">
+                            <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" target="_blank" class="hover:text-green-400"><i data-lucide="github"></i></a>
+                            <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" class="hover:text-green-400"><i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative "Code/Image" Area -->
+                    <div class="md:col-span-6 md:col-start-7 md:row-start-1 h-full min-h-[300px] bg-slate-900 rounded border border-slate-700 opacity-50 group-hover:opacity-100 transition-opacity relative overflow-y-auto">
+                         <div class="absolute inset-0 p-4 font-mono text-xs text-slate-500 leading-relaxed">
+                            <span class="text-purple-400">class</span> 
+                            <span class="text-yellow-400">ProductPage</span> {<br><br>
+
+                            &nbsp;&nbsp;productData = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Backpack"</span>: <span class="text-green-400">"sauce-labs-backpack"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"T-Shirt"</span>: <span class="text-green-400">"sauce-labs-bolt-t-shirt"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Bike Light"</span>: <span class="text-green-400">"sauce-labs-bike-light"</span>,<br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"T-Shirt Red"</span>: <span class="text-green-400">"test.allthethings()-t-shirt-(red)"</span><br>
+                            &nbsp;&nbsp;};<br><br>
+
+                            &nbsp;&nbsp;<span class="text-blue-400">addToCart</span>(productName) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">const</span> testId = this.productData[productName];<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cy.get(<span class="text-green-400">`[data-test="add-to-cart-${testId}"]`</span>).click();<br>
+                            &nbsp;&nbsp;}<br>
+                        }<br><br>
+
+                        <span class="text-purple-400">export default</span> 
+                        <span class="text-yellow-400">ProductPage</span>;
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 2 (Reversed Layout) -->
+                <div class="group relative grid md:grid-cols-12 gap-4 items-center">
+                    <!-- Content -->
+                    <div class="md:col-span-7 md:col-start-6 md:row-start-1 z-10 p-6 text-left md:text-right order-1">
+                        <p class="font-mono text-green-400 text-sm mb-2">API Automation Testing</p>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4"><a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" class="hover:text-green-400 transition-colors">Petstore Swagger</a></h3>
+                        <div class="ml-auto max-w-xl bg-slate-800 p-6 rounded-lg shadow-xl text-slate-400 mb-4 border border-slate-700">
+                            <p>
+                                Implemented API automation testing for Swagger Petstore using Mocha and Chai.
+                                Covered endpoint validation, request/response assertions, file upload testing,
+                                and error handling scenarios to ensure API functionality and stability.
+                            </p>
+                        </div>
+                        <ul class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 mb-6 justify-start md:justify-end">
+                            <li>Mocha</li>
+                            <li>Chai</li>
+                            <li>Postman</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="flex gap-4 text-slate-300 justify-start md:justify-end">
+                            <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" class="hover:text-green-400"><i data-lucide="github"></i></a>
+                            <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" class="hover:text-green-400"><i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                    
+                        <!-- Decorative Area -->
+                        <div class="md:col-span-6 md:col-start-1 md:row-start-1 h-full min-h-[300px] bg-slate-900 rounded border border-slate-700 opacity-50 group-hover:opacity-100 transition-opacity relative overflow-y-auto order-2">
+                            <div class="absolute inset-0 p-4 font-mono text-xs text-slate-500 leading-relaxed">
+                                <span class="text-purple-400">it</span>(<span class="text-green-400">"Upload Image - Negative Case"</span>, <span class="text-purple-400">async function</span> () {<br>
+
+                                &nbsp;&nbsp;<span class="text-purple-400">const</span> res = <span class="text-purple-400">await</span> request<br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;.<span class="text-blue-400">post</span>(<span class="text-green-400">"/v2/pet/999999/uploadImage"</span>)<br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;.<span class="text-blue-400">attach</span>(<span class="text-green-400">"file"</span>, fs.readFileSync(...), <span class="text-green-400">"test-image.png"</span>);<br>
+
+                                <br>
+
+                                &nbsp;&nbsp;<span class="text-yellow-400">expect</span>(res.status).to.equal(<span class="text-green-400">404</span>);<br>
+
+                                &nbsp;&nbsp;<span class="text-yellow-400">expect</span>(res.body)<br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;.to.have.property(<span class="text-green-400">"message"</span>)<br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;.that.includes(<span class="text-green-400">"Pet not found"</span>);<br>
+
+                                <br>
+
+                                &nbsp;&nbsp;console.<span class="text-blue-400">log</span>(<span class="text-green-400">"Upload Error Response:"</span>, res.body);<br>
+
+                                });<br>
+
+                                <br>
+
+                                <span class="text-slate-600">// API Automation Testing with Mocha & Chai</span>
+                            </div>
+
+                            <!-- Gradient overlay -->
+                            <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-green-400 text-green-400 px-8 py-4 rounded font-mono hover:bg-green-400/10 transition-colors">
+                    View Full Project Archive
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 text-center max-w-2xl mx-auto px-4">
+        <span class="text-green-400 font-mono mb-4 block">05. What's Next?</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-6">Get In Touch</h2>
+        <p class="text-slate-400 mb-10 text-lg">
+            Currently looking for new opportunities in Automation Engineering. Whether you have a question about my stack or just want to say hi, my inbox is always open.
+        </p>
+        <a href="mailto:zhanfar.isman@gmail.com" class="bg-transparent border border-green-400 text-green-400 px-8 py-4 rounded font-mono text-lg hover:bg-green-400 hover:text-slate-900 transition-all duration-300">
+            Say Hello
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 text-center border-t border-slate-800">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="#" class="text-slate-400 hover:text-green-400 transition-colors"><i data-lucide="github"></i></a>
+            <a href="#" class="text-slate-400 hover:text-green-400 transition-colors"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="text-slate-400 hover:text-green-400 transition-colors"><i data-lucide="twitter"></i></a>
+        </div>
+        <p class="font-mono text-xs text-slate-500">
+            Copyright © 2024 Zhanpar Isman Andria<br>
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Hide on Scroll Logic
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                nav.classList.remove('-translate-y-full');
+                return;
+            }
+            if (currentScroll > lastScroll && !nav.classList.contains('hidden')) {
+                // Scroll Down
+                nav.classList.add('-translate-y-full');
+                nav.classList.add('transition-transform');
+                nav.classList.add('duration-300');
+            } else {
+                // Scroll Up
+                nav.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
