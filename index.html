@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhanpar Isman Andria — QA Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,56 +14,50 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        surface: { 50: '#f8fafc', 100: '#f0f4f8', 200: '#e2e8f0', 700: '#1e293b', 800: '#0f172a', 900: '#020617' },
-                        accent: { DEFAULT: '#a78bfa', light: '#c4b5fd', dark: '#7c3aed' },
-                        warm: { DEFAULT: '#fb923c', light: '#fdba74' },
+                        primary: { DEFAULT: '#1a1a1a', light: '#4a4a4a', muted: '#6b6b6b' },
+                        accent: { DEFAULT: '#2563eb', light: '#3b82f6', dark: '#1d4ed8' },
+                        border: { DEFAULT: '#e5e7eb', light: '#f3f4f6' },
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-surface-900 text-surface-200 font-sans antialiased overflow-x-hidden">
-
-    <div class="fixed inset-0 -z-10">
-        <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-accent-dark/15 rounded-full blur-[128px] animate-float-slow"></div>
-        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-warm/10 rounded-full blur-[128px] animate-float-slower"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[200px]"></div>
-    </div>
+<body class="bg-white text-primary font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0">
-        <div class="mx-auto px-6 lg:px-12 mt-4">
-            <div class="bg-surface-800/60 backdrop-blur-2xl rounded-2xl border border-white/5 px-6 py-3 flex justify-between items-center shadow-2xl shadow-black/20">
+    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-xl border-b border-border-light">
+        <div class="mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-16">
                 <a href="#home" class="flex items-center gap-2 group">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-warm flex items-center justify-center text-surface-900 font-bold text-sm group-hover:scale-110 transition-transform">Z</div>
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm group-hover:scale-105 transition-transform">Z</div>
                     <span class="font-semibold text-sm hidden sm:block">Zhanpar</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-1">
-                    <a href="#about" class="nav-link px-4 py-2 rounded-xl text-sm text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">About</a>
-                    <a href="#skills" class="nav-link px-4 py-2 rounded-xl text-sm text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Skills</a>
-                    <a href="#experience" class="nav-link px-4 py-2 rounded-xl text-sm text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Experience</a>
-                    <a href="#projects" class="nav-link px-4 py-2 rounded-xl text-sm text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Projects</a>
-                    <a href="#contact" class="ml-2 px-5 py-2 rounded-xl text-sm font-medium bg-gradient-to-r from-accent to-warm text-surface-900 hover:shadow-lg hover:shadow-accent/25 hover:scale-105 transition-all">Let's Talk</a>
+                    <a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">About</a>
+                    <a href="#skills" class="nav-link px-4 py-2 rounded-lg text-sm text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Skills</a>
+                    <a href="#experience" class="nav-link px-4 py-2 rounded-lg text-sm text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Experience</a>
+                    <a href="#projects" class="nav-link px-4 py-2 rounded-lg text-sm text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Projects</a>
+                    <a href="#contact" class="ml-2 px-5 py-2 rounded-lg text-sm font-medium bg-primary text-white hover:bg-primary-light transition-all">Let's Talk</a>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden text-surface-200 hover:text-white p-2">
+                <button id="mobile-menu-btn" class="md:hidden text-primary hover:text-primary-light p-2">
                     <i data-lucide="menu" class="w-5 h-5"></i>
                 </button>
             </div>
         </div>
-        <div class="md:hidden hidden mx-4 mt-2" id="mobile-menu">
-            <div class="bg-surface-800/90 backdrop-blur-2xl rounded-2xl border border-white/5 p-4 space-y-1 shadow-2xl">
-                <a href="#about" class="block px-4 py-3 rounded-xl text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">About</a>
-                <a href="#skills" class="block px-4 py-3 rounded-xl text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Skills</a>
-                <a href="#experience" class="block px-4 py-3 rounded-xl text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Experience</a>
-                <a href="#projects" class="block px-4 py-3 rounded-xl text-surface-200/70 hover:text-white hover:bg-white/5 transition-all">Projects</a>
-                <a href="#contact" class="block px-4 py-3 rounded-xl text-center font-medium bg-gradient-to-r from-accent to-warm text-surface-900">Let's Talk</a>
+        <div class="md:hidden hidden border-t border-border-light" id="mobile-menu">
+            <div class="px-6 py-4 space-y-1 bg-white">
+                <a href="#about" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">About</a>
+                <a href="#skills" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Skills</a>
+                <a href="#experience" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Experience</a>
+                <a href="#projects" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Projects</a>
+                <a href="#contact" class="block px-4 py-3 rounded-lg text-center font-medium bg-primary text-white">Let's Talk</a>
             </div>
         </div>
     </nav>
@@ -73,53 +67,47 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-5 gap-12 items-center">
                 <div class="lg:col-span-3 space-y-8">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm animate-fade-in">
-                        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                        <span class="text-surface-200/70">Available for opportunities</span>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 text-sm animate-fade-in">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-green-700">Available for opportunities</span>
                     </div>
 
-                    <div class="space-y-6 animate-fade-in-up">
-                        <div class="relative w-28 h-28 group">
-                            <div class="absolute -inset-1 bg-gradient-to-br from-accent via-warm to-accent rounded-full opacity-75 group-hover:opacity-100 blur-sm group-hover:blur-md transition-all duration-500"></div>
-                            <div class="absolute inset-0 rounded-full overflow-hidden border-2 border-surface-900">
-                                <img src="IMG_4531_VSCO 6.jpg" alt="Zhanpar Isman Andria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            </div>
+                    <div class="space-y-4 animate-fade-in-up">
+                        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-border animate-fade-in-up">
+                            <img src="IMG_4531_VSCO 6.jpg" alt="Zhanpar Isman Andria" class="w-full h-full object-cover">
                         </div>
 
                         <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                            <span class="text-white">Zhanpar</span><br>
-                            <span class="text-white">Isman Andria</span>
+                            <span class="text-primary">Zhanpar</span><br>
+                            <span class="text-primary">Isman Andria</span>
                         </h1>
-                        <div class="flex items-center gap-3">
-                            <div class="h-px w-12 bg-gradient-to-r from-accent to-transparent"></div>
-                            <p class="text-lg sm:text-xl text-accent-light font-medium">Software Quality Assurance Engineer</p>
-                        </div>
+                        <p class="text-lg sm:text-xl text-accent font-medium">Software Quality Assurance Engineer</p>
                     </div>
 
-                    <p class="text-lg text-surface-200/60 max-w-xl leading-relaxed animate-fade-in-up-delay">
+                    <p class="text-lg text-primary-muted max-w-xl leading-relaxed animate-fade-in-up-delay">
                         Ensuring quality from requirements to release. Specialized in
-                        <span class="text-white font-medium">Manual Testing</span>,
-                        <span class="text-white font-medium">API Testing</span>,
-                        <span class="text-white font-medium">Test Automation</span>,
-                        and <span class="text-white font-medium">Performance Testing</span>. Hands-on experience with Cypress, Appium, WebdriverIO, Mocha/Chai, Postman, SQL, and JMeter — making sure web and mobile apps are reliable, scalable, and production-ready.
+                        <span class="text-primary font-medium">Manual Testing</span>,
+                        <span class="text-primary font-medium">API Testing</span>,
+                        <span class="text-primary font-medium">Test Automation</span>,
+                        and <span class="text-primary font-medium">Performance Testing</span>. Hands-on experience with Cypress, Appium, WebdriverIO, Mocha/Chai, Postman, SQL, and JMeter.
                     </p>
 
                     <div class="flex flex-wrap gap-4 animate-fade-in-up-delay-2">
-                        <a href="#projects" class="group px-8 py-4 rounded-2xl font-semibold bg-gradient-to-r from-accent to-warm text-surface-900 hover:shadow-xl hover:shadow-accent/20 hover:scale-105 transition-all flex items-center gap-2">
+                        <a href="#projects" class="group px-8 py-4 rounded-xl font-semibold bg-primary text-white hover:bg-primary-light transition-all flex items-center gap-2">
                             View My Work
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="mailto:zhanfar.isman@gmail.com" class="px-8 py-4 rounded-2xl font-semibold border border-white/10 hover:bg-white/5 hover:border-white/20 transition-all flex items-center gap-2">
+                        <a href="mailto:zhanfar.isman@gmail.com" class="px-8 py-4 rounded-xl font-semibold border border-border hover:bg-gray-50 transition-all flex items-center gap-2">
                             <i data-lucide="mail" class="w-4 h-4"></i>
                             Say Hello
                         </a>
                     </div>
 
                     <div class="flex items-center gap-5 pt-4 animate-fade-in-up-delay-2">
-                        <a href="https://github.com/Zhanpar789" target="_blank" class="text-surface-200/40 hover:text-white hover:scale-110 transition-all">
+                        <a href="https://github.com/Zhanpar789" target="_blank" class="text-primary-muted hover:text-primary hover:scale-110 transition-all">
                             <i class="fa-brands fa-github text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/zhanparismanandria/" target="_blank" class="text-surface-200/40 hover:text-white hover:scale-110 transition-all">
+                        <a href="https://www.linkedin.com/in/zhanparismanandria/" target="_blank" class="text-primary-muted hover:text-primary hover:scale-110 transition-all">
                             <i class="fa-brands fa-linkedin text-xl"></i>
                         </a>
                     </div>
@@ -127,81 +115,80 @@
 
                 <div class="lg:col-span-2 animate-fade-in-up-delay">
                     <div class="relative">
-                        <div class="absolute -inset-4 bg-gradient-to-br from-accent/20 to-warm/20 rounded-3xl blur-2xl"></div>
-                        <div class="relative bg-surface-800/80 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
-                            <div class="bg-surface-900/80 px-5 py-3 flex items-center gap-2 border-b border-white/5">
+                        <div class="relative bg-gray-50 rounded-2xl border border-border overflow-hidden shadow-sm">
+                            <div class="bg-white px-5 py-3 flex items-center gap-2 border-b border-border">
                                 <div class="flex gap-1.5">
-                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
                                 </div>
-                                <span class="ml-2 text-xs text-surface-200/30 font-mono">qa-suite — running</span>
+                                <span class="ml-2 text-xs text-primary-muted font-mono">qa-suite — running</span>
                             </div>
                             <div class="p-5 font-mono text-sm space-y-2">
-                                <div class="flex items-center gap-2 text-surface-200/40">
+                                <div class="flex items-center gap-2 text-primary-muted">
                                     <span class="text-accent">$</span> <span>npx cypress run</span>
                                 </div>
                                 <div class="space-y-1.5 pl-4">
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 0">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 0">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Login Feature</span>
-                                        <span class="text-surface-200/20 ml-auto">1.2s</span>
+                                        <span class="text-primary-muted/50 ml-auto">1.2s</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 1">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 1">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Registration Flow</span>
-                                        <span class="text-surface-200/20 ml-auto">2.4s</span>
+                                        <span class="text-primary-muted/50 ml-auto">2.4s</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 2">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 2">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Student Admission</span>
-                                        <span class="text-surface-200/20 ml-auto">3.1s</span>
+                                        <span class="text-primary-muted/50 ml-auto">3.1s</span>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2 text-surface-200/40 pt-2">
+                                <div class="flex items-center gap-2 text-primary-muted pt-2">
                                     <span class="text-accent">$</span> <span>newman run api-collection</span>
                                 </div>
                                 <div class="space-y-1.5 pl-4">
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 3">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 3">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Auth Service</span>
-                                        <span class="text-surface-200/20 ml-auto">180ms</span>
+                                        <span class="text-primary-muted/50 ml-auto">180ms</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 4">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 4">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Student Service</span>
-                                        <span class="text-surface-200/20 ml-auto">95ms</span>
+                                        <span class="text-primary-muted/50 ml-auto">95ms</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 5">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 5">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Registration API</span>
-                                        <span class="text-surface-200/20 ml-auto">120ms</span>
+                                        <span class="text-primary-muted/50 ml-auto">120ms</span>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2 text-surface-200/40 pt-2">
+                                <div class="flex items-center gap-2 text-primary-muted pt-2">
                                     <span class="text-accent">$</span> <span>jmeter -n -t load-test.jmx</span>
                                 </div>
                                 <div class="space-y-1.5 pl-4">
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 6">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 6">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>500 Concurrent Users</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-green-400/90 terminal-line" style="--delay: 7">
+                                    <div class="flex items-center gap-2 text-green-600 terminal-line" style="--delay: 7">
                                         <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
                                         <span>Avg Response: 187ms</span>
                                     </div>
                                 </div>
-                                <div class="border-t border-white/5 pt-3 mt-3">
+                                <div class="border-t border-border pt-3 mt-3">
                                     <div class="flex items-center justify-between text-xs">
-                                        <span class="text-surface-200/40">Coverage</span>
-                                        <span class="text-accent-light">Web · Mobile · API</span>
+                                        <span class="text-primary-muted">Coverage</span>
+                                        <span class="text-accent">Web · Mobile · API</span>
                                     </div>
                                     <div class="flex items-center justify-between text-xs mt-1">
-                                        <span class="text-surface-200/40">Status</span>
-                                        <span class="text-green-400 font-bold">ALL PASSED</span>
+                                        <span class="text-primary-muted">Status</span>
+                                        <span class="text-green-600 font-bold">ALL PASSED</span>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2 text-surface-200/30 pt-2">
+                                <div class="flex items-center gap-2 text-primary-muted/50 pt-2">
                                     <span class="text-accent">$</span>
                                     <span class="cursor-blink">_</span>
                                 </div>
@@ -217,117 +204,145 @@
     <div class="px-6 lg:px-12 pb-16">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="stat-card bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-6 text-center hover:bg-white/[0.06] hover:border-white/10 transition-all">
-                    <div class="text-3xl font-bold text-white mb-1">2+</div>
-                    <div class="text-sm text-surface-200/50">Years Experience</div>
+                <div class="stat-card bg-gray-50 rounded-xl border border-border p-6 text-center hover:bg-white hover:shadow-sm transition-all">
+                    <div class="text-3xl font-bold text-primary mb-1">2+</div>
+                    <div class="text-sm text-primary-muted">Years Experience</div>
                 </div>
-                <div class="stat-card bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-6 text-center hover:bg-white/[0.06] hover:border-white/10 transition-all">
-                    <div class="text-3xl font-bold text-white mb-1">3</div>
-                    <div class="text-sm text-surface-200/50">Testing Domains</div>
+                <div class="stat-card bg-gray-50 rounded-xl border border-border p-6 text-center hover:bg-white hover:shadow-sm transition-all">
+                    <div class="text-3xl font-bold text-primary mb-1">3</div>
+                    <div class="text-sm text-primary-muted">Testing Domains</div>
                 </div>
-                <div class="stat-card bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-6 text-center hover:bg-white/[0.06] hover:border-white/10 transition-all">
-                    <div class="text-3xl font-bold text-white mb-1">10+</div>
-                    <div class="text-sm text-surface-200/50">Tools Mastered</div>
+                <div class="stat-card bg-gray-50 rounded-xl border border-border p-6 text-center hover:bg-white hover:shadow-sm transition-all">
+                    <div class="text-3xl font-bold text-primary mb-1">10+</div>
+                    <div class="text-sm text-primary-muted">Tools Mastered</div>
                 </div>
-                <div class="stat-card bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-6 text-center hover:bg-white/[0.06] hover:border-white/10 transition-all">
-                    <div class="text-3xl font-bold text-white mb-1">Web + Mobile</div>
-                    <div class="text-sm text-surface-200/50">Platform Coverage</div>
+                <div class="stat-card bg-gray-50 rounded-xl border border-border p-6 text-center hover:bg-white hover:shadow-sm transition-all">
+                    <div class="text-3xl font-bold text-primary mb-1">Web + Mobile</div>
+                    <div class="text-sm text-primary-muted">Platform Coverage</div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 lg:px-12 bg-gray-50/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-12">
+                <p class="text-accent font-medium text-sm mb-2 uppercase tracking-wider">About Me</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-primary">Get To Know Me</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <p class="text-lg text-primary-muted leading-relaxed mb-6">
+                        An information technology professional with over 2 years of experience in software quality assurance. Skilled in manual testing, test automation, API testing, and performance testing. Experienced in working collaboratively within cross-functional teams and dynamic environments.
+                    </p>
+                    <p class="text-lg text-primary-muted leading-relaxed">
+                        A fast learner with strong attention to detail, committed to ensuring software quality through comprehensive testing strategies. Passionate about continuous improvement, exploring new testing methodologies, and delivering reliable, production-ready applications.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl border border-border p-5">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i>
+                            <span class="font-medium">Location</span>
+                        </div>
+                        <p class="text-primary-muted">Indonesia</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-border p-5">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-accent"></i>
+                            <span class="font-medium">Experience</span>
+                        </div>
+                        <p class="text-primary-muted">2+ Years</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-border p-5">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
+                            <span class="font-medium">Email</span>
+                        </div>
+                        <p class="text-primary-muted text-sm">zhanfar.isman@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6 lg:px-12">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16 max-w-2xl">
-                <p class="text-accent font-mono text-sm mb-3 tracking-wider uppercase">What I Work With</p>
-                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Technical Skills</h2>
-                <p class="text-surface-200/50 text-lg">The tools and technologies I use to ensure software quality at every level.</p>
+            <div class="mb-12">
+                <p class="text-accent font-medium text-sm mb-2 uppercase tracking-wider">What I Work With</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-primary">Technical Skills</h2>
+                <p class="text-primary-muted text-lg mt-4">The tools and technologies I use to ensure software quality at every level.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="skill-card group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-8 hover:bg-white/[0.06] hover:border-accent/30 transition-all duration-500 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all"></div>
-                    <div class="relative">
-                        <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
-                            <i data-lucide="bot" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Test Automation</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Cypress.io</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Selenium</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Appium</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">WebdriverIO</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Mocha & Chai</span>
-                        </div>
+                <div class="skill-card group bg-white rounded-xl border border-border p-8 hover:shadow-md hover:border-accent/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-5 text-accent">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Test Automation</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Cypress.io</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Selenium</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Appium</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">WebdriverIO</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Mocha & Chai</span>
                     </div>
                 </div>
 
-                <div class="skill-card group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-8 hover:bg-white/[0.06] hover:border-warm/30 transition-all duration-500 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-warm/5 rounded-full blur-3xl group-hover:bg-warm/10 transition-all"></div>
-                    <div class="relative">
-                        <div class="w-14 h-14 rounded-2xl bg-warm/10 flex items-center justify-center mb-6 text-warm group-hover:scale-110 transition-transform">
-                            <i data-lucide="server" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">API & Performance</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Postman</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Apache JMeter</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">REST APIs</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Load Testing</span>
-                        </div>
+                <div class="skill-card group bg-white rounded-xl border border-border p-8 hover:shadow-md hover:border-accent/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-5 text-accent">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">API & Performance</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Postman</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Apache JMeter</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">REST APIs</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Load Testing</span>
                     </div>
                 </div>
 
-                <div class="skill-card group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-8 hover:bg-white/[0.06] hover:border-green-500/30 transition-all duration-500 overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-3xl group-hover:bg-green-500/10 transition-all"></div>
-                    <div class="relative">
-                        <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
-                            <i data-lucide="code" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Languages</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">JavaScript</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Java</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">C# / C++</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">SQL</span>
-                        </div>
+                <div class="skill-card group bg-white rounded-xl border border-border p-8 hover:shadow-md hover:border-accent/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-5 text-accent">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">JavaScript</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Java</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">C# / C++</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">SQL</span>
                     </div>
                 </div>
 
-                <div class="skill-card group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-8 hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500 overflow-hidden md:col-span-2 lg:col-span-1">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-all"></div>
-                    <div class="relative">
-                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
-                            <i data-lucide="workflow" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">CI/CD & Workflow</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">GitHub Actions</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Jenkins</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">JIRA</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">ClickUp</span>
-                        </div>
+                <div class="skill-card group bg-white rounded-xl border border-border p-8 hover:shadow-md hover:border-accent/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-5 text-accent">
+                        <i data-lucide="workflow" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">CI/CD & Workflow</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">GitHub Actions</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Jenkins</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">JIRA</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">ClickUp</span>
                     </div>
                 </div>
 
-                <div class="skill-card group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/5 p-8 hover:bg-white/[0.06] hover:border-pink-500/30 transition-all duration-500 overflow-hidden lg:col-span-2">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/5 rounded-full blur-3xl group-hover:bg-pink-500/10 transition-all"></div>
-                    <div class="relative">
-                        <div class="w-14 h-14 rounded-2xl bg-pink-500/10 flex items-center justify-center mb-6 text-pink-400 group-hover:scale-110 transition-transform">
-                            <i data-lucide="shield-check" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Testing Expertise</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Manual Testing</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Gherkin / BDD</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">UAT</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Regression Testing</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Mobile Testing (Android & iOS)</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">Database Validation</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm text-surface-200/70 border border-white/5">PR Review</span>
-                        </div>
+                <div class="skill-card group bg-white rounded-xl border border-border p-8 hover:shadow-md hover:border-accent/30 transition-all duration-300 md:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-5 text-accent">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Testing Expertise</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Manual Testing</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Gherkin / BDD</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">UAT</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Regression Testing</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Mobile Testing (Android & iOS)</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Database Validation</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">PR Review</span>
                     </div>
                 </div>
             </div>
@@ -335,114 +350,112 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6 lg:px-12">
+    <section id="experience" class="py-20 px-6 lg:px-12 bg-gray-50/50">
         <div class="max-w-5xl mx-auto">
-            <div class="mb-16 max-w-2xl">
-                <p class="text-accent font-mono text-sm mb-3 tracking-wider uppercase">Where I've Worked</p>
-                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Work Experience</h2>
-                <p class="text-surface-200/50 text-lg">My professional journey in software quality assurance.</p>
+            <div class="mb-12">
+                <p class="text-accent font-medium text-sm mb-2 uppercase tracking-wider">Where I've Worked</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-primary">Work Experience</h2>
+                <p class="text-primary-muted text-lg mt-4">My professional journey in software quality assurance.</p>
             </div>
 
             <div class="space-y-6">
-                <div class="experience-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 p-8 sm:p-10 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-warm to-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="experience-card group bg-white rounded-2xl border border-border p-8 sm:p-10 hover:shadow-md transition-all duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-8">
                         <div>
-                            <h3 class="text-2xl font-bold text-white">QA Engineer</h3>
-                            <p class="text-accent-light font-medium text-lg">Suteki Technology</p>
+                            <h3 class="text-2xl font-bold text-primary">QA Engineer</h3>
+                            <p class="text-accent font-medium text-lg">Suteki Technology</p>
                         </div>
-                        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-surface-200/60 shrink-0">
+                        <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-50 border border-border text-sm text-primary-muted shrink-0">
                             <i data-lucide="calendar" class="w-4 h-4"></i>
                             Aug 2023 — Present
                         </div>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Comprehensive manual testing using Gherkin syntax to validate functionality and business requirements</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Documented test scenarios, results, and bug reports in ClickUp for clear traceability</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Application quality monitoring, bug identification, and cross-functional collaboration</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>User Acceptance Testing (UAT) directly with users to validate completed features</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Manual testing with SQL queries for database validation and data accuracy</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Backend validation by testing API endpoints using Postman</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Manual mobile testing for Android and iOS applications</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Web automation with Cypress + Cucumber (BDD) for regression and functional testing</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>CI/CD pipelines with GitHub Actions for regular automation test execution</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>API automation with Mocha, Chai, and Axios for OpenAPI-based projects</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Mobile automation with Appium + WebdriverIO for Android and iOS</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
+                        <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Performance testing with Apache JMeter for high concurrent user loads</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60 sm:col-span-2">
+                        <div class="flex items-start gap-3 text-primary-muted sm:col-span-2">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
                             <span>Active participation in pull request reviews to maintain automation code quality</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="experience-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 p-8 sm:p-10 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-surface-200/20 via-surface-200/10 to-surface-200/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="experience-card group bg-white rounded-2xl border border-border p-8 sm:p-10 hover:shadow-md transition-all duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-8">
                         <div>
-                            <h3 class="text-2xl font-bold text-white">QA Manual Internship</h3>
-                            <p class="text-surface-200/60 font-medium text-lg">Nusantech</p>
+                            <h3 class="text-2xl font-bold text-primary">QA Manual Internship</h3>
+                            <p class="text-primary-muted font-medium text-lg">Nusantech</p>
                         </div>
-                        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-surface-200/60 shrink-0">
+                        <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-50 border border-border text-sm text-primary-muted shrink-0">
                             <i data-lucide="calendar" class="w-4 h-4"></i>
                             Des 2022 — Apr 2023
                         </div>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-                        <div class="flex items-start gap-3 text-surface-200/60">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-surface-200/40 mt-1 shrink-0"></i>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-primary-muted mt-1 shrink-0"></i>
                             <span>Conducted manual testing and documented bugs using spreadsheets</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-surface-200/40 mt-1 shrink-0"></i>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-primary-muted mt-1 shrink-0"></i>
                             <span>Reported and tracked issues to ensure timely resolution</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-surface-200/40 mt-1 shrink-0"></i>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-primary-muted mt-1 shrink-0"></i>
                             <span>Utilized Jira for issue tracking and collaboration with dev team</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-surface-200/40 mt-1 shrink-0"></i>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-primary-muted mt-1 shrink-0"></i>
                             <span>Strengthened analytical skills by identifying bug patterns and root causes</span>
                         </div>
-                        <div class="flex items-start gap-3 text-surface-200/60 sm:col-span-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-surface-200/40 mt-1 shrink-0"></i>
+                        <div class="flex items-start gap-3 text-primary-muted sm:col-span-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-primary-muted mt-1 shrink-0"></i>
                             <span>Improved application stability through clear and structured bug reports</span>
                         </div>
                     </div>
@@ -454,99 +467,97 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6 lg:px-12">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16 max-w-2xl">
-                <p class="text-accent font-mono text-sm mb-3 tracking-wider uppercase">What I've Built</p>
-                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Selected Projects</h2>
-                <p class="text-surface-200/50 text-lg">Automation frameworks and testing solutions I've developed.</p>
+            <div class="mb-12">
+                <p class="text-accent font-medium text-sm mb-2 uppercase tracking-wider">What I've Built</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-primary">Selected Projects</h2>
+                <p class="text-primary-muted text-lg mt-4">Automation frameworks and testing solutions I've developed.</p>
             </div>
 
             <div class="grid gap-8">
                 <!-- Project 1 -->
-                <div class="project-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 overflow-hidden hover:border-accent/20 transition-all duration-500">
+                <div class="project-card group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-all duration-300">
                     <div class="grid md:grid-cols-2">
                         <div class="p-8 sm:p-10 flex flex-col justify-center">
-                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-mono mb-6 w-fit">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-50 text-accent text-xs font-medium mb-6 w-fit">
                                 <i data-lucide="bot" class="w-3 h-3"></i>
                                 Automation Testing
                             </div>
-                            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent-light transition-colors">
-                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" class="hover:text-accent-light transition-colors">Subsidi Pertamina</a>
+                            <h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" class="hover:text-accent transition-colors">Subsidi Pertamina</a>
                             </h3>
-                            <p class="text-surface-200/50 mb-8 leading-relaxed">
+                            <p class="text-primary-muted mb-8 leading-relaxed">
                                 Built a Cypress automation framework with Cucumber BDD to automate LPG subsidy sales reporting for Subsidi Tepat Pertamina. Automates KK number input from Excel data, replacing repetitive manual copy-paste workflows and reducing human error.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">JavaScript</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cypress</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cucumber</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Node.js</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">JavaScript</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Cypress</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Cucumber</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Node.js</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i class="fa-brands fa-github"></i> Source Code
                                 </a>
-                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i data-lucide="external-link" class="w-4 h-4"></i> View Project
                                 </a>
                             </div>
                         </div>
-                        <div class="relative bg-surface-900/50 p-6 flex items-center justify-center min-h-[300px] overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
-                            <div class="relative font-mono text-xs text-surface-200/30 leading-relaxed w-full max-w-sm">
-                                <div><span class="text-accent/70">Given</span> <span class="text-green-400/60">user login to Subsidi App</span></div>
-                                <div class="mt-2"><span class="text-accent/70">When</span> <span class="text-green-400/60">user input KK number</span></div>
-                                <div class="pl-4">cy.get(<span class="text-green-400/60">"#inputKK"</span>)</div>
-                                <div class="pl-8">.<span class="text-blue-400/60">type</span>(kkNumber);</div>
-                                <div class="mt-2"><span class="text-accent/70">Then</span> <span class="text-green-400/60">data submitted successfully</span></div>
-                                <div class="pl-4">cy.get(<span class="text-green-400/60">".btn-submit"</span>)</div>
-                                <div class="pl-8">.<span class="text-blue-400/60">click</span>();</div>
-                                <div class="pl-4"><span class="text-warm/70">expect</span>(<span class="text-green-400/60">".success-msg"</span>)</div>
-                                <div class="pl-8">.<span class="text-blue-400/60">should</span>(<span class="text-green-400/60">"be.visible"</span>);</div>
+                        <div class="relative bg-gray-50 p-6 flex items-center justify-center min-h-[300px] border-t md:border-t-0 md:border-l border-border">
+                            <div class="font-mono text-xs text-primary-muted leading-relaxed w-full max-w-sm">
+                                <div><span class="text-accent">Given</span> <span class="text-green-600">user login to Subsidi App</span></div>
+                                <div class="mt-2"><span class="text-accent">When</span> <span class="text-green-600">user input KK number</span></div>
+                                <div class="pl-4">cy.get(<span class="text-green-600">"#inputKK"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-600">type</span>(kkNumber);</div>
+                                <div class="mt-2"><span class="text-accent">Then</span> <span class="text-green-600">data submitted successfully</span></div>
+                                <div class="pl-4">cy.get(<span class="text-green-600">".btn-submit"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-600">click</span>();</div>
+                                <div class="pl-4"><span class="text-primary">expect</span>(<span class="text-green-600">".success-msg"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-600">should</span>(<span class="text-green-600">"be.visible"</span>);</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 overflow-hidden hover:border-accent/20 transition-all duration-500">
+                <div class="project-card group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-all duration-300">
                     <div class="grid md:grid-cols-2">
                         <div class="p-8 sm:p-10 flex flex-col justify-center">
-                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-mono mb-6 w-fit">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-50 text-accent text-xs font-medium mb-6 w-fit">
                                 <i data-lucide="bot" class="w-3 h-3"></i>
                                 Automation Testing
                             </div>
-                            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent-light transition-colors">
-                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" class="hover:text-accent-light transition-colors">Swagger Labs</a>
+                            <h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" class="hover:text-accent transition-colors">Swagger Labs</a>
                             </h3>
-                            <p class="text-surface-200/50 mb-8 leading-relaxed">
+                            <p class="text-primary-muted mb-8 leading-relaxed">
                                 Built an end-to-end automation framework using Cypress and Page Object Model (POM). Automated login, product, cart, and checkout workflows with reusable test components.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">JavaScript</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cypress</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cucumber</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">JavaScript</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Cypress</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Cucumber</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i class="fa-brands fa-github"></i> Source Code
                                 </a>
-                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i data-lucide="external-link" class="w-4 h-4"></i> View Project
                                 </a>
                             </div>
                         </div>
-                        <div class="relative bg-surface-900/50 p-6 flex items-center justify-center min-h-[300px] overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
-                            <div class="relative font-mono text-xs text-surface-200/30 leading-relaxed w-full max-w-sm">
-                                <div><span class="text-accent/70">class</span> <span class="text-warm/70">ProductPage</span> {</div>
+                        <div class="relative bg-gray-50 p-6 flex items-center justify-center min-h-[300px] border-t md:border-t-0 md:border-l border-border">
+                            <div class="font-mono text-xs text-primary-muted leading-relaxed w-full max-w-sm">
+                                <div><span class="text-accent">class</span> <span class="text-primary">ProductPage</span> {</div>
                                 <div class="pl-4">productData = {</div>
-                                <div class="pl-8"><span class="text-green-400/60">"Backpack"</span>: <span class="text-green-400/60">"sauce-labs-backpack"</span>,</div>
-                                <div class="pl-8"><span class="text-green-400/60">"T-Shirt"</span>: <span class="text-green-400/60">"sauce-labs-bolt-t-shirt"</span>,</div>
-                                <div class="pl-8"><span class="text-green-400/60">"Bike Light"</span>: <span class="text-green-400/60">"sauce-labs-bike-light"</span></div>
+                                <div class="pl-8"><span class="text-green-600">"Backpack"</span>: <span class="text-green-600">"sauce-labs-backpack"</span>,</div>
+                                <div class="pl-8"><span class="text-green-600">"T-Shirt"</span>: <span class="text-green-600">"sauce-labs-bolt-t-shirt"</span>,</div>
+                                <div class="pl-8"><span class="text-green-600">"Bike Light"</span>: <span class="text-green-600">"sauce-labs-bike-light"</span></div>
                                 <div class="pl-4">};</div>
-                                <div class="pl-4 mt-2"><span class="text-blue-400/60">addToCart</span>(name) {</div>
-                                <div class="pl-8"><span class="text-accent/70">const</span> id = <span class="text-accent/70">this</span>.productData[name];</div>
-                                <div class="pl-8">cy.get(<span class="text-green-400/60">`[data-test="...${id}"]`</span>).click();</div>
+                                <div class="pl-4 mt-2"><span class="text-blue-600">addToCart</span>(name) {</div>
+                                <div class="pl-8"><span class="text-accent">const</span> id = <span class="text-accent">this</span>.productData[name];</div>
+                                <div class="pl-8">cy.get(<span class="text-green-600">`[data-test="...${id}"]`</span>).click();</div>
                                 <div class="pl-4">}</div>
                                 <div>}</div>
                             </div>
@@ -555,45 +566,44 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 overflow-hidden hover:border-warm/20 transition-all duration-500">
+                <div class="project-card group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-all duration-300">
                     <div class="grid md:grid-cols-2">
-                        <div class="relative bg-surface-900/50 p-6 flex items-center justify-center min-h-[300px] overflow-hidden order-2 md:order-1">
-                            <div class="absolute inset-0 bg-gradient-to-bl from-warm/5 to-transparent"></div>
-                            <div class="relative font-mono text-xs text-surface-200/30 leading-relaxed w-full max-w-sm">
-                                <div><span class="text-accent/70">it</span>(<span class="text-green-400/60">"Upload Image - Negative"</span>,</div>
-                                <div class="pl-4"><span class="text-accent/70">async function</span>() {</div>
-                                <div class="pl-4"><span class="text-accent/70">const</span> res = <span class="text-accent/70">await</span> request</div>
-                                <div class="pl-8">.<span class="text-blue-400/60">post</span>(<span class="text-green-400/60">"/v2/pet/999999/uploadImage"</span>)</div>
-                                <div class="pl-8">.<span class="text-blue-400/60">attach</span>(<span class="text-green-400/60">"file"</span>, data, <span class="text-green-400/60">"test.png"</span>);</div>
-                                <div class="mt-2 pl-4"><span class="text-warm/70">expect</span>(res.status).to.equal(<span class="text-green-400/60">404</span>);</div>
-                                <div class="pl-4"><span class="text-warm/70">expect</span>(res.body)</div>
-                                <div class="pl-8">.to.have.property(<span class="text-green-400/60">"message"</span>)</div>
-                                <div class="pl-8">.that.includes(<span class="text-green-400/60">"Pet not found"</span>);</div>
+                        <div class="relative bg-gray-50 p-6 flex items-center justify-center min-h-[300px] order-2 md:order-1 border-t md:border-t-0 md:border-r border-border">
+                            <div class="font-mono text-xs text-primary-muted leading-relaxed w-full max-w-sm">
+                                <div><span class="text-accent">it</span>(<span class="text-green-600">"Upload Image - Negative"</span>,</div>
+                                <div class="pl-4"><span class="text-accent">async function</span>() {</div>
+                                <div class="pl-4"><span class="text-accent">const</span> res = <span class="text-accent">await</span> request</div>
+                                <div class="pl-8">.<span class="text-blue-600">post</span>(<span class="text-green-600">"/v2/pet/999999/uploadImage"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-600">attach</span>(<span class="text-green-600">"file"</span>, data, <span class="text-green-600">"test.png"</span>);</div>
+                                <div class="mt-2 pl-4"><span class="text-primary">expect</span>(res.status).to.equal(<span class="text-green-600">404</span>);</div>
+                                <div class="pl-4"><span class="text-primary">expect</span>(res.body)</div>
+                                <div class="pl-8">.to.have.property(<span class="text-green-600">"message"</span>)</div>
+                                <div class="pl-8">.that.includes(<span class="text-green-600">"Pet not found"</span>);</div>
                                 <div class="pl-4">});</div>
                             </div>
                         </div>
                         <div class="p-8 sm:p-10 flex flex-col justify-center order-1 md:order-2">
-                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-warm/10 text-warm text-xs font-mono mb-6 w-fit">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-50 text-accent text-xs font-medium mb-6 w-fit">
                                 <i data-lucide="server" class="w-3 h-3"></i>
                                 API Automation Testing
                             </div>
-                            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-warm-light transition-colors">
-                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" class="hover:text-warm-light transition-colors">Petstore Swagger</a>
+                            <h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">
+                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" class="hover:text-accent transition-colors">Petstore Swagger</a>
                             </h3>
-                            <p class="text-surface-200/50 mb-8 leading-relaxed">
+                            <p class="text-primary-muted mb-8 leading-relaxed">
                                 Implemented API automation testing for Swagger Petstore using Mocha and Chai. Covered endpoint validation, request/response assertions, file upload testing, and error handling scenarios to ensure API functionality and stability.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Mocha</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Chai</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Postman</span>
-                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">JavaScript</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Mocha</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Chai</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">Postman</span>
+                                <span class="px-3 py-1.5 rounded-md bg-gray-50 text-xs font-mono text-primary-muted border border-border">JavaScript</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-warm transition-colors">
+                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i class="fa-brands fa-github"></i> Source Code
                                 </a>
-                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-warm transition-colors">
+                                <a href="https://github.com/Zhanpar789/API-Automation-MochaChai/tree/master" target="_blank" class="flex items-center gap-2 text-sm text-primary-muted hover:text-accent transition-colors">
                                     <i data-lucide="external-link" class="w-4 h-4"></i> View Project
                                 </a>
                             </div>
@@ -605,39 +615,36 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 lg:px-12">
+    <section id="contact" class="py-24 px-6 lg:px-12 bg-gray-50/50">
         <div class="max-w-3xl mx-auto">
-            <div class="relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 p-10 sm:p-16 text-center overflow-hidden">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px]"></div>
-                <div class="relative">
-                    <p class="text-accent font-mono text-sm mb-3 tracking-wider uppercase">What's Next?</p>
-                    <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">Get In Touch</h2>
-                    <p class="text-surface-200/50 text-lg mb-10 max-w-lg mx-auto">
-                        Currently looking for new opportunities in Automation Engineering. Whether you have a question about my stack or just want to say hi, my inbox is always open.
-                    </p>
-                    <a href="mailto:zhanfar.isman@gmail.com" class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-semibold bg-gradient-to-r from-accent to-warm text-surface-900 hover:shadow-xl hover:shadow-accent/20 hover:scale-105 transition-all text-lg">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                        Say Hello
-                    </a>
-                </div>
+            <div class="bg-white rounded-2xl border border-border p-10 sm:p-16 text-center">
+                <p class="text-accent font-medium text-sm mb-3 uppercase tracking-wider">What's Next?</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-primary mb-6">Get In Touch</h2>
+                <p class="text-primary-muted text-lg mb-10 max-w-lg mx-auto">
+                    Currently looking for new opportunities in Automation Engineering. Whether you have a question about my stack or just want to say hi, my inbox is always open.
+                </p>
+                <a href="mailto:zhanfar.isman@gmail.com" class="inline-flex items-center gap-3 px-10 py-5 rounded-xl font-semibold bg-primary text-white hover:bg-primary-light transition-all text-lg">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    Say Hello
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-6 lg:px-12 border-t border-white/5">
+    <footer class="py-10 px-6 lg:px-12 border-t border-border">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-2">
-                <div class="w-6 h-6 rounded-md bg-gradient-to-br from-accent to-warm flex items-center justify-center text-surface-900 font-bold text-xs">Z</div>
-                <p class="text-sm text-surface-200/30">
+                <div class="w-6 h-6 rounded-md bg-primary flex items-center justify-center text-white font-bold text-xs">Z</div>
+                <p class="text-sm text-primary-muted">
                     &copy; 2024 Zhanpar Isman Andria
                 </p>
             </div>
             <div class="flex items-center gap-6">
-                <a href="https://github.com/Zhanpar789" target="_blank" class="text-surface-200/30 hover:text-white transition-colors">
+                <a href="https://github.com/Zhanpar789" target="_blank" class="text-primary-muted hover:text-primary transition-colors">
                     <i class="fa-brands fa-github text-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/zhanparismanandria/" target="_blank" class="text-surface-200/30 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/zhanparismanandria/" target="_blank" class="text-primary-muted hover:text-primary transition-colors">
                     <i class="fa-brands fa-linkedin text-lg"></i>
                 </a>
             </div>

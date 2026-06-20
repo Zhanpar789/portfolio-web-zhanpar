@@ -1,5 +1,5 @@
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .font-mono {
@@ -11,20 +11,8 @@ html {
 }
 
 ::selection {
-    background: rgba(167, 139, 250, 0.3);
-    color: white;
-}
-
-@keyframes float-slow {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -30px) scale(1.05); }
-    66% { transform: translate(-20px, 20px) scale(0.95); }
-}
-
-@keyframes float-slower {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-40px, 20px) scale(1.08); }
-    66% { transform: translate(30px, -30px) scale(0.92); }
+    background: rgba(37, 99, 235, 0.15);
+    color: #1a1a1a;
 }
 
 @keyframes fade-in {
@@ -33,7 +21,7 @@ html {
 }
 
 @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -42,40 +30,32 @@ html {
     to { opacity: 1; transform: translateX(0); }
 }
 
-.animate-float-slow {
-    animation: float-slow 20s ease-in-out infinite;
-}
-
-.animate-float-slower {
-    animation: float-slower 25s ease-in-out infinite;
-}
-
 .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
+    animation: fade-in 0.6s ease-out forwards;
 }
 
 .animate-fade-in-up {
     opacity: 0;
-    animation: fade-in-up 0.8s ease-out forwards;
-    animation-delay: 0.2s;
+    animation: fade-in-up 0.6s ease-out forwards;
+    animation-delay: 0.1s;
 }
 
 .animate-fade-in-up-delay {
     opacity: 0;
-    animation: fade-in-up 0.8s ease-out forwards;
-    animation-delay: 0.4s;
+    animation: fade-in-up 0.6s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 .animate-fade-in-up-delay-2 {
     opacity: 0;
-    animation: fade-in-up 0.8s ease-out forwards;
-    animation-delay: 0.6s;
+    animation: fade-in-up 0.6s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 .terminal-line {
     opacity: 0;
-    animation: terminal-appear 0.4s ease-out forwards;
-    animation-delay: calc(var(--delay) * 0.15s + 0.8s);
+    animation: terminal-appear 0.3s ease-out forwards;
+    animation-delay: calc(var(--delay) * 0.12s + 0.5s);
 }
 
 .cursor-blink {
@@ -92,8 +72,8 @@ html {
 .project-card,
 .stat-card {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.5s, border-color 0.5s, box-shadow 0.5s;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s, border-color 0.3s;
 }
 
 .skill-card.animate-in,
@@ -105,21 +85,22 @@ html {
 }
 
 .skill-card:nth-child(1) { transition-delay: 0s; }
-.skill-card:nth-child(2) { transition-delay: 0.1s; }
-.skill-card:nth-child(3) { transition-delay: 0.2s; }
-.skill-card:nth-child(4) { transition-delay: 0.3s; }
-.skill-card:nth-child(5) { transition-delay: 0.4s; }
+.skill-card:nth-child(2) { transition-delay: 0.08s; }
+.skill-card:nth-child(3) { transition-delay: 0.16s; }
+.skill-card:nth-child(4) { transition-delay: 0.24s; }
+.skill-card:nth-child(5) { transition-delay: 0.32s; }
 
 .experience-card:nth-child(1) { transition-delay: 0s; }
-.experience-card:nth-child(2) { transition-delay: 0.15s; }
+.experience-card:nth-child(2) { transition-delay: 0.1s; }
 
 .project-card:nth-child(1) { transition-delay: 0s; }
-.project-card:nth-child(2) { transition-delay: 0.15s; }
+.project-card:nth-child(2) { transition-delay: 0.1s; }
+.project-card:nth-child(3) { transition-delay: 0.2s; }
 
 .stat-card:nth-child(1) { transition-delay: 0s; }
-.stat-card:nth-child(2) { transition-delay: 0.08s; }
-.stat-card:nth-child(3) { transition-delay: 0.16s; }
-.stat-card:nth-child(4) { transition-delay: 0.24s; }
+.stat-card:nth-child(2) { transition-delay: 0.06s; }
+.stat-card:nth-child(3) { transition-delay: 0.12s; }
+.stat-card:nth-child(4) { transition-delay: 0.18s; }
 
 ::-webkit-scrollbar {
     width: 6px;
@@ -130,10 +111,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.25);
 }
