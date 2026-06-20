@@ -470,6 +470,52 @@
                                 Automation Testing
                             </div>
                             <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent-light transition-colors">
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" class="hover:text-accent-light transition-colors">Subsidi Pertamina</a>
+                            </h3>
+                            <p class="text-surface-200/50 mb-8 leading-relaxed">
+                                Built a Cypress automation framework with Cucumber BDD to automate LPG subsidy sales reporting for Subsidi Tepat Pertamina. Automates KK number input from Excel data, replacing repetitive manual copy-paste workflows and reducing human error.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">JavaScript</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cypress</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Cucumber</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-mono text-surface-200/60 border border-white/5">Node.js</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                                <a href="https://github.com/Zhanpar789/Automation-test-subsidi-pertamina" target="_blank" class="flex items-center gap-2 text-sm text-surface-200/50 hover:text-accent transition-colors">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative bg-surface-900/50 p-6 flex items-center justify-center min-h-[300px] overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
+                            <div class="relative font-mono text-xs text-surface-200/30 leading-relaxed w-full max-w-sm">
+                                <div><span class="text-accent/70">Given</span> <span class="text-green-400/60">user login to Subsidi App</span></div>
+                                <div class="mt-2"><span class="text-accent/70">When</span> <span class="text-green-400/60">user input KK number</span></div>
+                                <div class="pl-4">cy.get(<span class="text-green-400/60">"#inputKK"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-400/60">type</span>(kkNumber);</div>
+                                <div class="mt-2"><span class="text-accent/70">Then</span> <span class="text-green-400/60">data submitted successfully</span></div>
+                                <div class="pl-4">cy.get(<span class="text-green-400/60">".btn-submit"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-400/60">click</span>();</div>
+                                <div class="pl-4"><span class="text-warm/70">expect</span>(<span class="text-green-400/60">".success-msg"</span>)</div>
+                                <div class="pl-8">.<span class="text-blue-400/60">should</span>(<span class="text-green-400/60">"be.visible"</span>);</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 overflow-hidden hover:border-accent/20 transition-all duration-500">
+                    <div class="grid md:grid-cols-2">
+                        <div class="p-8 sm:p-10 flex flex-col justify-center">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-mono mb-6 w-fit">
+                                <i data-lucide="bot" class="w-3 h-3"></i>
+                                Automation Testing
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent-light transition-colors">
                                 <a href="https://github.com/Zhanpar789/Automation-Test-SwaggerLabs-Cypress" class="hover:text-accent-light transition-colors">Swagger Labs</a>
                             </h3>
                             <p class="text-surface-200/50 mb-8 leading-relaxed">
@@ -508,7 +554,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 3 -->
                 <div class="project-card group relative bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/5 overflow-hidden hover:border-warm/20 transition-all duration-500">
                     <div class="grid md:grid-cols-2">
                         <div class="relative bg-surface-900/50 p-6 flex items-center justify-center min-h-[300px] overflow-hidden order-2 md:order-1">
