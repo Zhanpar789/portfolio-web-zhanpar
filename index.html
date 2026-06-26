@@ -46,12 +46,16 @@
                     <a href="#contact" class="ml-2 px-5 py-2 rounded-lg text-sm font-medium bg-primary text-white hover:bg-primary-light transition-all">Let's Talk</a>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden text-primary hover:text-primary-light p-2">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
+                <button id="mobile-menu-btn" class="md:hidden text-primary hover:text-primary-light p-2 relative z-50">
+                    <div class="w-5 h-5 flex flex-col justify-center gap-1.5">
+                        <span class="hamburger-line block w-5 h-0.5 bg-primary rounded transition-all duration-300 origin-center"></span>
+                        <span class="hamburger-line block w-5 h-0.5 bg-primary rounded transition-all duration-300 origin-center"></span>
+                        <span class="hamburger-line block w-5 h-0.5 bg-primary rounded transition-all duration-300 origin-center"></span>
+                    </div>
                 </button>
             </div>
         </div>
-        <div class="md:hidden hidden border-t border-border-light" id="mobile-menu">
+        <div class="md:hidden mobile-menu border-t border-border-light" id="mobile-menu">
             <div class="px-6 py-4 space-y-1 bg-white">
                 <a href="#about" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">About</a>
                 <a href="#skills" class="block px-4 py-3 rounded-lg text-primary-muted hover:text-primary hover:bg-gray-50 transition-all">Skills</a>
@@ -89,7 +93,7 @@
                         <span class="text-primary font-medium">Manual Testing</span>,
                         <span class="text-primary font-medium">API Testing</span>,
                         <span class="text-primary font-medium">Test Automation</span>,
-                        and <span class="text-primary font-medium">Performance Testing</span>. Hands-on experience with Cypress, Appium, WebdriverIO, Mocha/Chai, Postman, SQL, and JMeter.
+                        and <span class="text-primary font-medium">Performance Testing</span>. Hands-on experience with Cypress, Playwright, Appium, WebdriverIO, Mocha/Chai, Postman, SQL, and JMeter.
                     </p>
 
                     <div class="flex flex-wrap gap-4 animate-fade-in-up-delay-2">
@@ -246,7 +250,7 @@
                             <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i>
                             <span class="font-medium">Location</span>
                         </div>
-                        <p class="text-primary-muted">Indonesia</p>
+                        <p class="text-primary-muted">Bandung, Indonesia</p>
                     </div>
                     <div class="bg-white rounded-xl border border-border p-5">
                         <div class="flex items-center gap-3 mb-2">
@@ -284,6 +288,7 @@
                     <h3 class="text-xl font-bold text-primary mb-4">Test Automation</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Cypress.io</span>
+                        <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Playwright</span>
                         <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Selenium</span>
                         <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">Appium</span>
                         <span class="px-3 py-1.5 rounded-md bg-gray-50 text-sm text-primary-muted border border-border">WebdriverIO</span>
@@ -373,39 +378,19 @@
                     <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Comprehensive manual testing using Gherkin syntax to validate functionality and business requirements</span>
+                            <span>Comprehensive manual testing using Gherkin syntax to validate application functionality against business requirements</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Documented test scenarios, results, and bug reports in ClickUp for clear traceability</span>
+                            <span>Execute manual mobile testing for Android and iOS applications</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Application quality monitoring, bug identification, and cross-functional collaboration</span>
+                            <span>Backend API testing using Postman and database validation through SQL queries and MongoDB</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>User Acceptance Testing (UAT) directly with users to validate completed features</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-primary-muted">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Manual testing with SQL queries for database validation and data accuracy</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-primary-muted">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Backend validation by testing API endpoints using Postman</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-primary-muted">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Manual mobile testing for Android and iOS applications</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-primary-muted">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Web automation with Cypress + Cucumber (BDD) for regression and functional testing</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-primary-muted">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>CI/CD pipelines with GitHub Actions for regular automation test execution</span>
+                            <span>Web automation with Cypress (JavaScript) and Playwright (TypeScript) with Cucumber for regression and functional testing</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
@@ -413,15 +398,27 @@
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Mobile automation with Appium + WebdriverIO for Android and iOS</span>
+                            <span>Mobile automation with Appium + WebdriverIO for Android and iOS platforms</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Performance testing with Apache JMeter for high concurrent user loads</span>
+                            <span>Integrate automated test suites into CI/CD pipelines using GitHub Actions for continuous test execution</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
+                            <span>Performance testing with Apache JMeter to ensure system stability under high concurrent loads</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
+                            <span>Conduct UAT sessions by presenting features directly to users and validating against expectations</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-primary-muted">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
+                            <span>Document test scenarios, execution results, and defect reports in ClickUp while collaborating with Scrum Masters and Developers</span>
                         </div>
                         <div class="flex items-start gap-3 text-primary-muted sm:col-span-2">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent mt-1 shrink-0"></i>
-                            <span>Active participation in pull request reviews to maintain automation code quality</span>
+                            <span>Actively participate in PR reviews to improve automation standards and maintain code quality</span>
                         </div>
                     </div>
                 </div>
